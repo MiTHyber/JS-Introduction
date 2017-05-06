@@ -5,13 +5,21 @@ function sayHello(){ // just using function keyword
 sayHello(); // calling the function
 
 function sayHelloToPerson(name, timeOfDay){
-  console.log("Hello " + name + "; Time of day is " + timeOfDay);
+  return "Hello " + name + "; Time of day is " + timeOfDay;
 }
 
-sayHelloToPerson("Saya", "afternoon");
+var returnedValue = sayHelloToPerson("Saya", "afternoon");
+console.log(returnedValue);
 
-sayHelloToPerson("Saya"); // missing arguments passed as undefined
+console.log(sayHelloToPerson("Saya")); // missing arguments passed as undefined
 
-sayHelloToPerson("Saya", "evening", 42); // extra argument is discarded
+console.log(sayHelloToPerson("Saya", "evening", 42)); // extra argument is discarded
 
 // so overloading is impossible in JS
+
+function returnNothing(){
+  // return;
+}
+
+console.log(returnNothing()); // if function doesn't return a value, but you're asking for one
+// then you get undefined
