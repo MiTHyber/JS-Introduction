@@ -1,3 +1,5 @@
+// functions are objects
+
 function sayHello(){ // just using function keyword
   console.log("Hello");
 }
